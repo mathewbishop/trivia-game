@@ -1,0 +1,36 @@
+header {
+    background-image: url('../images/coverPic.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
+h1, h2 {
+    color: white;
+    text-align: center;
+    padding-right: 20rem;
+    font-family: 'Cherry Swash', cursive;
+}
+
+h1 {
+    font-size: 6rem;
+    padding-top: 8rem;
+}
+
+#start-button-div {
+    text-align: center;
+    padding-right: 20rem;
+    margin-top: 2rem;
+}
+
+#start-button {
+    font-weight: bold;
+    animation-name: start-button-fade;
+    animation-duration: 7s;
+}
+
+
+
+@keyframes start-button-fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

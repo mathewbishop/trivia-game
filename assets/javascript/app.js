@@ -9,14 +9,15 @@
 
 
 // we need
-    // question data (list of questions and answers)
-        // object literals for questions (an array of them?)
+    // question data (list of questions and answers)    √
+        // object literals for questions (an array of them?)    √
+    // user input to choose answers for quiz
     // a 'start' button that begins the game
     // a 'start over' button at the end of the game that restarts game
     // a timer for each question
     // a right/wrong display for each question
     // a grade display at end of game
-    // a method to cycle through questions
+    // a method to cycle through questions (on click or timeout)
 
 var parisGun = {
     question: "True or False: 'The Paris Gun' was a German artillery piece that was able to hit Paris from its position behind the Western Front's German line (about 75 miles).",

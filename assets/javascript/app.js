@@ -20,7 +20,7 @@
     // a method to cycle through questions (on click or timeout)
 
 var parisGun = {
-    question: "True or False: 'The Paris Gun' was a German artillery piece that was able to hit Paris from its position behind the Western Front's German line (about 75 miles).",
+    question: "True or False: 'The Paris Gun' was a German artillery piece that was able to hit Paris from its position behind the Western Front's German line (about 75 miles distance).",
     answers: {
         a: "True",
         b: "False"

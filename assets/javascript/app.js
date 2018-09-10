@@ -25,7 +25,7 @@ var parisGun = {
         a: "True",
         b: "False"
     },
-    correctAnswer: "True",
+    correctAnswer: "Answer: True",
     moreInfo: "'The Paris Gun' had to fire successively larger shells each time it was fired due to the barrel diameter increasing with each shot. The shells fired by this gun reached the greatest height of any human-made projectile prior to first successful v-2 rocket flight test in 1942"
 };
 
@@ -35,8 +35,20 @@ var poisonGas = {
         a: "True",
         b: "False"
     },
-    correctAnswer: "True",
+    correctAnswer: "Answer: True",
     moreInfo: "The use of poision gas violated the agreed upon rules of war outlined in the 1899 Hague Convention"
 };
+
+
+function displayQuestion(questionObject) {
+    $('#question').html(questionObject.question);
+    $('#true-btn').html(questionObject.answers.a);
+    $('#false-btn').html(questionObject.answers.b);
+}
+
+function displayAnswer(questionObject) {
+    $('#correct-answer').html(questionObject.correctAnswer);
+    $('#more-info').html(questionObject.moreInfo);
+}
 
 

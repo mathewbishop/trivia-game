@@ -28,11 +28,13 @@ h1 {
     animation-duration: 7s;
 }
 
-
-main {
+#question-div {
     display: none;
 }
 
+#answer-div {
+    display: none;
+}
 
 
 @keyframes start-button-fade {

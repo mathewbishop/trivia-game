@@ -25,7 +25,7 @@ var parisGun = {
         a: "True",
         b: "False"
     },
-    correctAnswer: "Answer: True",
+    correctAnswer: "True",
     moreInfo: "'The Paris Gun' had to fire successively larger shells each time it was fired due to the barrel diameter increasing with each shot. The shells fired by this gun reached the greatest height of any human-made projectile prior to first successful v-2 rocket flight test in 1942"
 };
 
@@ -51,4 +51,10 @@ function displayAnswer(questionObject) {
     $('#more-info').html(questionObject.moreInfo);
 }
 
+
+$('#start-button').click(function() {
+    $('header').css("display", "none");
+    displayQuestion(parisGun);
+    $('#question-div').show();
+})
 

@@ -28,11 +28,7 @@ h1 {
     animation-duration: 7s;
 }
 
-#question-div {
-    display: none;
-}
-
-#answer-div {
+main {
     display: none;
 }
 

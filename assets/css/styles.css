@@ -16,20 +16,20 @@ h1 {
     padding-top: 8rem;
 }
 
-#start-button-div {
+#start-btn-div {
     text-align: center;
     padding-right: 20rem;
     margin-top: 2rem;
 }
 
-#start-button {
+#start-btn {
     font-weight: bold;
     animation-name: start-button-fade;
     animation-duration: 7s;
 }
 
 main {
-    display: ;
+    display: none;
 }
 
 

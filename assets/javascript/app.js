@@ -32,6 +32,12 @@ var userAnswers = [];
 var userCorrect = 0;
 var userIncorrect = 0;
 
+
+$('#start-btn').click(function() {
+    $('header').hide();
+    $('main').show();
+})
+
 $('#submit-btn').click(function() {
     
         if ($('input[name="question0"]:checked').val() === (correctAnswers.answer0)) {
@@ -99,6 +105,12 @@ $('#submit-btn').click(function() {
         console.log("correct " + userCorrect);
         console.log("incorrect " + userIncorrect);
 
-        
-    })
+    var gradeDiv = $("<div>");
+        gradeDiv.attr("id", "grade-div");
+    var correctTotal = $("<p>");
+        correctTotal.attr("id", "correct-total");
+    var incorrectTotal = $("<p>");
+        incorrectTotal.attr("id", "incorrect-total");
+
+})
     

@@ -29,10 +29,19 @@ var correctAnswers = {
 }
 
 var userAnswers = [];
+var userCorrect = 0;
+var userIncorrect = 0;
 
 $('#submit-btn').click(function() {
     $('input[name="question0"]:checked').each(function() {
-        userAnswers.push($(this).val());
+        if ($(this).val() === (correctAnswers.answer0)) {
+            userCorrect++;
+        }
+        if ($(this).val() !== (correctAnswers.answer0)) {
+            userIncorrect++;
+        }
+        console.log("correct " + userCorrect);
+        console.log("incorrect " + userIncorrect);
     })
     $('input[name="question1"]:checked').each(function() {
         userAnswers.push($(this).val());

@@ -33,45 +33,72 @@ var userCorrect = 0;
 var userIncorrect = 0;
 
 $('#submit-btn').click(function() {
-    $('input[name="question0"]:checked').each(function() {
-        if ($(this).val() === (correctAnswers.answer0)) {
+    
+        if ($('input[name="question0"]:checked').val() === (correctAnswers.answer0)) {
             userCorrect++;
         }
-        if ($(this).val() !== (correctAnswers.answer0)) {
+        else { 
             userIncorrect++;
         }
+
+        if ($('input[name="question1"]:checked').val() === (correctAnswers.answer1)) {
+            userCorrect++;
+        }
+        else { 
+            userIncorrect++;
+        }
+        if ($('input[name="question2"]:checked').val() === (correctAnswers.answer2)) {
+            userCorrect++;
+        }
+        else { 
+            userIncorrect++;
+        }
+        if ($('input[name="question3"]:checked').val() === (correctAnswers.answer3)) {
+            userCorrect++;
+        }
+        else { 
+            userIncorrect++;
+        }
+        if ($('input[name="question4"]:checked').val() === (correctAnswers.answer4)) {
+            userCorrect++;
+        }
+        else { 
+            userIncorrect++;
+        }
+        if ($('input[name="question5"]:checked').val() === (correctAnswers.answer5)) {
+            userCorrect++;
+        }
+        else { 
+            userIncorrect++;
+        }
+        if ($('input[name="question6"]:checked').val() === (correctAnswers.answer6)) {
+            userCorrect++;
+        }
+        else { 
+            userIncorrect++;
+        }
+        if ($('input[name="question7"]:checked').val() === (correctAnswers.answer7)) {
+            userCorrect++;
+        }
+        else { 
+            userIncorrect++;
+        }
+        if ($('input[name="question8"]:checked').val() === (correctAnswers.answer8)) {
+            userCorrect++;
+        }
+        else { 
+            userIncorrect++;
+        }
+        if ($('input[name="question9"]:checked').val() === (correctAnswers.answer9)) {
+            userCorrect++;
+        }
+        else { 
+            userIncorrect++;
+        }
+
         console.log("correct " + userCorrect);
         console.log("incorrect " + userIncorrect);
-    })
-    $('input[name="question1"]:checked').each(function() {
-        userAnswers.push($(this).val());
-    })
-    $('input[name="question2"]:checked').each(function() {
-        userAnswers.push($(this).val());
-    })
-    $('input[name="question3"]:checked').each(function() {
-        userAnswers.push($(this).val());
-    })
-    $('input[name="question4"]:checked').each(function() {
-        userAnswers.push($(this).val());
-    })
-    $('input[name="question5"]:checked').each(function() {
-        userAnswers.push($(this).val());
-    })
-    $('input[name="question6"]:checked').each(function() {
-        userAnswers.push($(this).val());
-    })
-    $('input[name="question7"]:checked').each(function() {
-        userAnswers.push($(this).val());
-    })
-    $('input[name="question8"]:checked').each(function() {
-        userAnswers.push($(this).val());
-    })
-    $('input[name="question9"]:checked').each(function() {
-        userAnswers.push($(this).val());
-    })
-    console.log(userAnswers);
-})
 
-
-
+        
+    })
+    

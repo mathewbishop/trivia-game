@@ -4,43 +4,65 @@
 
 // features
     // timer 
-    // grading function
+    // grading mechanism
         // check correct answers against user answers
+            // get value of the answer user picked
+            // check that value against the correct answer
     // grade page
     // restart button
 //"1", "1", "4", "2", "1", "1", "1", "4", "3", "1"
+
+
+//var correctAnswers = ["1", "1", "4", "2", "1", "1", "1", "4", "3", "1"];
+
 var correctAnswers = {
+    answer0: "1",
     answer1: "1",
-    answer2: "1",
-    answer3: "4",
-    answer4: "2",
+    answer2: "4",
+    answer3: "2",
+    answer4: "1",
     answer5: "1",
     answer6: "1",
-    answer7: "1",
-    answer8: "4",
-    answer9: "3",
-    answer10: "1"
+    answer7: "4",
+    answer8: "3",
+    answer9: "1"
 }
+
 var userAnswers = [];
 
-
-
-
-
-
- 
-
-
-
-    
-
-
-
-
-
-
-
-
+$('#submit-btn').click(function() {
+    $('input[name="question0"]:checked').each(function() {
+        userAnswers.push($(this).val());
+    })
+    $('input[name="question1"]:checked').each(function() {
+        userAnswers.push($(this).val());
+    })
+    $('input[name="question2"]:checked').each(function() {
+        userAnswers.push($(this).val());
+    })
+    $('input[name="question3"]:checked').each(function() {
+        userAnswers.push($(this).val());
+    })
+    $('input[name="question4"]:checked').each(function() {
+        userAnswers.push($(this).val());
+    })
+    $('input[name="question5"]:checked').each(function() {
+        userAnswers.push($(this).val());
+    })
+    $('input[name="question6"]:checked').each(function() {
+        userAnswers.push($(this).val());
+    })
+    $('input[name="question7"]:checked').each(function() {
+        userAnswers.push($(this).val());
+    })
+    $('input[name="question8"]:checked').each(function() {
+        userAnswers.push($(this).val());
+    })
+    $('input[name="question9"]:checked').each(function() {
+        userAnswers.push($(this).val());
+    })
+    console.log(userAnswers);
+})
 
 
 

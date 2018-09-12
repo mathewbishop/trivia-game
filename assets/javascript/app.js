@@ -50,7 +50,7 @@ function resetQuiz() {
         $('input[type="radio"]').prop('checked', false);
     })
     $('#grade-div').hide();
-    $('main').show();
+    $('main').show(500);
 }
 
 // starts quiz 
@@ -227,4 +227,6 @@ $('#submit-btn').click(gradeQuiz);
     
 
 // resets quiz on click
-$('#reset-btn').click(resetQuiz);
+$('#reset-btn').click(function() {
+    resetQuiz();
+})

@@ -30,12 +30,23 @@ h1 {
 
 main {
     display: none;
+    background-size: cover;
+    animation-name: main-carousel;
+    animation-duration: 90s;
 }
 
 #grade-div {
     display: none;
 }
 
+
+@keyframes main-carousel {
+    0% {background-image: url('../images/gasMask.jpg')}
+    25% {background-image: url('../images/howitzerCrew.jpg')}
+    50% {background-image: url('../images/machineGun.jpg')}
+    75% {background-image: url('../images/parisGun.jpg')}
+    100% {background-image: url('../images/trench.jpg')}
+}
 
 @keyframes start-button-fade {
     from {opacity: 0;}

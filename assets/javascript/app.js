@@ -28,10 +28,13 @@ var correctAnswers = {
     answer9: "1"
 }
 
-var userAnswers = [];
 var userCorrect = 0;
 var userIncorrect = 0;
 var userUnanswered = 0;
+
+function resetQuiz() {
+    
+}
 
 
 $('#start-btn').click(function() {
@@ -41,70 +44,157 @@ $('#start-btn').click(function() {
 
 $('#submit-btn').click(function() {
     
+    if ($('input[name="question0"]').is(":checked")) {
+
         if ($('input[name="question0"]:checked').val() === (correctAnswers.answer0)) {
             userCorrect++;
-        }
-        else if ($('input[name="question0"]').not(':checked')) {
-            userUnanswered++;
         } 
-           else { 
+        if ($('input[name="question0"]:checked').val() != (correctAnswers.answer0)) { 
             userIncorrect++;
         }
+    }
+    else {
+        userUnanswered++;
+    }
 
-        if ($('input[name="question1"]:checked').val() === (correctAnswers.answer1)) {
+
+    if ($('input[name="question1"]').is(":checked")) {
+
+        if ($('input[name="question1"]:checked').val() === (correctAnswers.answer0)) {
             userCorrect++;
-        }
-        else { 
+        } 
+        if ($('input[name="question1"]:checked').val() != (correctAnswers.answer0)) { 
             userIncorrect++;
         }
-        if ($('input[name="question2"]:checked').val() === (correctAnswers.answer2)) {
+    }
+    else {
+        userUnanswered++;
+    }
+
+
+    if ($('input[name="question2"]').is(":checked")) {
+
+        if ($('input[name="question2"]:checked').val() === (correctAnswers.answer0)) {
             userCorrect++;
-        }
-        else { 
+        } 
+        if ($('input[name="question2"]:checked').val() != (correctAnswers.answer0)) { 
             userIncorrect++;
         }
-        if ($('input[name="question3"]:checked').val() === (correctAnswers.answer3)) {
+    }
+    else {
+        userUnanswered++;
+    }
+
+
+    if ($('input[name="question3"]').is(":checked")) {
+
+        if ($('input[name="question3"]:checked').val() === (correctAnswers.answer0)) {
             userCorrect++;
-        }
-        else { 
+        } 
+        if ($('input[name="question3"]:checked').val() != (correctAnswers.answer0)) { 
             userIncorrect++;
         }
-        if ($('input[name="question4"]:checked').val() === (correctAnswers.answer4)) {
+    }
+    else {
+        userUnanswered++;
+    }
+
+
+
+    if ($('input[name="question4"]').is(":checked")) {
+
+        if ($('input[name="question4"]:checked').val() === (correctAnswers.answer0)) {
             userCorrect++;
-        }
-        else { 
+        } 
+        if ($('input[name="question4"]:checked').val() != (correctAnswers.answer0)) { 
             userIncorrect++;
         }
-        if ($('input[name="question5"]:checked').val() === (correctAnswers.answer5)) {
+    }
+    else {
+        userUnanswered++;
+    }
+
+
+
+    if ($('input[name="question5"]').is(":checked")) {
+
+        if ($('input[name="question5"]:checked').val() === (correctAnswers.answer0)) {
             userCorrect++;
-        }
-        else { 
+        } 
+        if ($('input[name="question5"]:checked').val() != (correctAnswers.answer0)) { 
             userIncorrect++;
         }
-        if ($('input[name="question6"]:checked').val() === (correctAnswers.answer6)) {
+    }
+    else {
+        userUnanswered++;
+    }
+
+
+
+    if ($('input[name="question6"]').is(":checked")) {
+
+        if ($('input[name="question6"]:checked').val() === (correctAnswers.answer0)) {
             userCorrect++;
-        }
-        else { 
+        } 
+        if ($('input[name="question6"]:checked').val() != (correctAnswers.answer0)) { 
             userIncorrect++;
         }
-        if ($('input[name="question7"]:checked').val() === (correctAnswers.answer7)) {
+    }
+    else {
+        userUnanswered++;
+    }
+
+
+
+    if ($('input[name="question7"]').is(":checked")) {
+
+        if ($('input[name="question7"]:checked').val() === (correctAnswers.answer0)) {
             userCorrect++;
-        }
-        else { 
+        } 
+        if ($('input[name="question7"]:checked').val() != (correctAnswers.answer0)) { 
             userIncorrect++;
         }
-        if ($('input[name="question8"]:checked').val() === (correctAnswers.answer8)) {
+    }
+    else {
+        userUnanswered++;
+    }
+
+
+
+    if ($('input[name="question8"]').is(":checked")) {
+
+        if ($('input[name="question8"]:checked').val() === (correctAnswers.answer0)) {
             userCorrect++;
-        }
-        else { 
+        } 
+        if ($('input[name="question8"]:checked').val() != (correctAnswers.answer0)) { 
             userIncorrect++;
         }
-        if ($('input[name="question9"]:checked').val() === (correctAnswers.answer9)) {
+    }
+    else {
+        userUnanswered++;
+    }
+
+
+
+    if ($('input[name="question9"]').is(":checked")) {
+
+        if ($('input[name="question9"]:checked').val() === (correctAnswers.answer0)) {
             userCorrect++;
-        }
-        else { 
+        } 
+        if ($('input[name="question9"]:checked').val() != (correctAnswers.answer0)) { 
             userIncorrect++;
         }
+    }
+    else {
+        userUnanswered++;
+    }
+
+    $('main').hide();
+    $('#grade-div').show();
+    
+    $('#correct-total').html("Correct: " + userCorrect);
+    $('#incorrect-total').html("Incorrect: " + userIncorrect);
+    $('#unanswered-total').html("Unanswered: " + userUnanswered);
 
         console.log("correct " + userCorrect);
         console.log("incorrect " + userIncorrect);
@@ -113,3 +203,4 @@ $('#submit-btn').click(function() {
 
 })
     
+

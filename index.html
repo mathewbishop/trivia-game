@@ -21,89 +21,151 @@
         <main>
             <p id="timer-display"></p>
             <form class="col-10 offset-1" id="quiz">
-                <div id="question0">
-                    <p>True or False: 'The Paris Gun' was a German artillery piece that was able to hit Paris from its position behind the Western Front's German line (about 75 miles distance).</p>
+                
+                    <p class="question">True or False: 'The Paris Gun' was a German artillery piece that was able to hit Paris from its position behind the Western Front's German line (about 75 miles distance).</p>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question0" value="1"> True<br>
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question0" value="2"> False<br>
+                        </label>
+                    </div>
+                
+                
+                    <p class="question">True or False: The use of poison gas was technically a war crime during World War I.</p>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question1" value="1">True<br>
+                        </label>
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question1" value="2">False<br>
+                        </label>
                     
-                        <input type="radio" name="question0" value="1">True<br>
-                        <input type="radio" name="question0" value="2">False<br>
-                    
-                </div>
-                <div id="question1">
-                    <p>True or False: The use of poison gas was technically a war crime during World War I.</p>
-                    
-                        <input type="radio" name="question1" value="1">True<br>
-                        <input type="radio" name="question1" value="2">False<br>
-                    
-                </div>
-                <div id="question2">
-                    <p>What year did America enter the war?</p>
-                    
-                        <input type="radio" name="question2" value="1">1914<br>
-                        <input type="radio" name="question2" value="2">1915<br>
-                        <input type="radio" name="question2" value="3">1916<br>
-                        <input type="radio" name="question2" value="4">1917<br>
-                    
-                </div>
-                <div id="question3">
-                    <p>Which country was the first to declare war?</p>
-                    
-                        <input type="radio" name="question3" value="1">Russia<br>
-                        <input type="radio" name="question3" value="2">Austria-Hungary<br>
-                        <input type="radio" name="question3" value="3">France<br>
-                        <input type="radio" name="question3" value="4">Germany<br>
-                    
-                </div>
-                <div id="question4">
-                    <p>True or False: The German government allowed Vladamir Lenin to pass through Germany into Russia hoping that he would spread Bolshevism and thereby cause a revolution in there, disrupting the Russian war effort.</p>
-                    
-                        <input type="radio" name="question4" value="1">True<br>
-                        <input type="radio" name="question4" value="2">False<br>
-                    
-                </div>
-                <div id="question5">
-                    <p>True or False: In the opening days of the war, French cavalry regiments rode into battle with steal armor.</p>
-                    
-                        <input type="radio" name="question5" value="1">True<br>
-                        <input type="radio" name="question5" value="2">False<br>
-                    
-                </div>
-                <div id="question6">
-                    <p>True or False: The modern battle tank was invented during the Great War.</p>
-                    
-                        <input type="radio" name="question6" value="1">True<br>
-                        <input type="radio" name="question6" value="2">False<br>
-                    
-                </div>
-                <div id="question7">
-                    <p>What is the estimated total casualities number, military and civilian, for World War I?</p>
-                    
-                        <input type="radio" name="question7" value="1">5 million<br>
-                        <input type="radio" name="question7" value="2">10 million<br>
-                        <input type="radio" name="question7" value="3">20 million<br>
-                        <input type="radio" name="question7" value="4">40 million<br>
-                    
-                </div>
-                <div id="question8">
-                    <p>How many countries were involved in World War I?</p>
-                    
-                        <input type="radio" name="question8" value="1">10<br>
-                        <input type="radio" name="question8" value="2">21<br>
-                        <input type="radio" name="question8" value="3">32<br>
-                        <input type="radio" name="question8" value="4">50<br>
-                    
-                </div>
-                <div id="question9">
-                    <p>The armistice that ended hostilities on the Western Front was signed when?</p>
-                    
-                        <input type="radio" name="question9" value="1">The 11th hour of the 11th day of the 11th month of 1918.<br>
-                        <input type="radio" name="question9" value="2">July 4, 1776<br>
-                        <input type="radio" name="question9" value="3">October 29, 1929<br>
-                        <input type="radio" name="question9" value="4">1941<br>
-                    
-                </div>
-                <div id="submit">
-                    <button type="button" id="submit-btn" value="submit">Submit</button>
-                </div>
+                    </div>
+                
+                    <p class="question">What year did America enter the war?</p>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question2" value="1">1914<br>
+                        </label>
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question2" value="2">1915<br>
+                        </label>
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question2" value="3">1916<br>
+                        </label>
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question2" value="4">1917<br>
+                        </label>
+                    </div>
+                
+                
+                    <p class="question">Which country was the first to declare war?</p>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question3" value="1">Russia<br>
+                        </label>
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question3" value="2">Austria-Hungary<br>
+                        </label>
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question3" value="3">France<br>
+                        </label>
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question3" value="4">Germany<br>
+                        </label>
+                    </div>
+                
+                
+                    <p class="question">True or False: The German government allowed Vladamir Lenin to pass through Germany into Russia hoping that he would spread Bolshevism and thereby cause a revolution in there, disrupting the Russian war effort.</p>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question4" value="1">True<br>
+                        </label>
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question4" value="2">False<br>
+                        </label>
+                    </div>
+                
+                
+                    <p class="question">True or False: In the opening days of the war, French cavalry regiments rode into battle with steal armor.</p>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question5" value="1">True<br>
+                        </label>
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question5" value="2">False<br>
+                        </label>
+                    </div>
+                
+                
+                    <p class="question">True or False: The modern battle tank was invented during the Great War.</p>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question6" value="1">True<br>
+                        </label>
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question6" value="2">False<br>
+                        </label>
+                    </div>
+                
+                
+                    <p class="question">What is the estimated total casualities number, military and civilian, for World War I?</p>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question7" value="1">5 million<br>
+                        </label>
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question7" value="2">10 million<br>
+                        </label>
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question7" value="3">20 million<br>
+                        </label>
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question7" value="4">40 million<br>
+                        </label>
+                    </div>
+                
+                
+                    <p class="question">How many countries were involved in World War I?</p>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question8" value="1">10<br>
+                        </label>
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question8" value="2">21<br>
+                        </label>
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question8" value="3">32<br>
+                        </label>
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question8" value="4">50<br>
+                        </label>
+                    </div>
+                
+                
+                    <p class="question">The armistice that ended hostilities on the Western Front was signed when?</p>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question9" value="1">The 11th hour of the 11th day of the 11th month of 1918.<br>
+                        </label>
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question9" value="2">July 4, 1776<br>
+                        </label>
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question9" value="3">October 29, 1929<br>
+                        </label>
+                        <label for="" class="btn btn-secondary">
+                            <input type="radio" name="question9" value="4">1941<br>
+                        </label>
+                    </div>
+                
+
+                    <div id="submit">
+                        <button type="button" id="submit-btn" value="submit">Submit</button>
+                    </div>
+
             </form>
         </main>
         <div id="grade-div">

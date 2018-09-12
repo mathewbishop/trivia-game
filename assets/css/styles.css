@@ -2,6 +2,7 @@ header {
     background-image: url('../images/coverPic.jpg');
     background-size: cover;
     height: 100vh;
+    display: none;
 }
 
 h1, h2 {
@@ -29,16 +30,20 @@ h1 {
 }
 
 main {
-    display: none;
+    /* display: none; */
     background-size: cover;
     animation-name: main-carousel;
-    animation-duration: 90s;
+    animation-duration: 90s; 
+    animation-iteration-count: infinite;
 }
 
-input[type="radio"] {
+.question {
+    font-weight: 500;
     font-size: 1.2rem;
-    color: white;
+    color: black;
 }
+
+
 
 #grade-div {
     display: none;

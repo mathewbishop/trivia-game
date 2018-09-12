@@ -1,4 +1,3 @@
-// need timer
 
 
 // object storing correct answers

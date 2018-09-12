@@ -35,6 +35,11 @@ main {
     animation-duration: 90s;
 }
 
+input[type="radio"] {
+    font-size: 1.2rem;
+    color: white;
+}
+
 #grade-div {
     display: none;
 }

@@ -32,8 +32,16 @@ var userCorrect = 0;
 var userIncorrect = 0;
 var userUnanswered = 0;
 
+
 function resetQuiz() {
-    
+    userCorrect = 0;
+    userIncorrect = 0;
+    userUnanswered = 0;
+    $(":checked").each(function() {
+        $('input[type="radio"]').prop('checked', false);
+    })
+    $('#grade-div').hide();
+    $('main').show();
 }
 
 
@@ -60,10 +68,10 @@ $('#submit-btn').click(function() {
 
     if ($('input[name="question1"]').is(":checked")) {
 
-        if ($('input[name="question1"]:checked').val() === (correctAnswers.answer0)) {
+        if ($('input[name="question1"]:checked').val() === (correctAnswers.answer1)) {
             userCorrect++;
         } 
-        if ($('input[name="question1"]:checked').val() != (correctAnswers.answer0)) { 
+        if ($('input[name="question1"]:checked').val() != (correctAnswers.answer1)) { 
             userIncorrect++;
         }
     }
@@ -74,10 +82,10 @@ $('#submit-btn').click(function() {
 
     if ($('input[name="question2"]').is(":checked")) {
 
-        if ($('input[name="question2"]:checked').val() === (correctAnswers.answer0)) {
+        if ($('input[name="question2"]:checked').val() === (correctAnswers.answer2)) {
             userCorrect++;
         } 
-        if ($('input[name="question2"]:checked').val() != (correctAnswers.answer0)) { 
+        if ($('input[name="question2"]:checked').val() != (correctAnswers.answer2)) { 
             userIncorrect++;
         }
     }
@@ -88,10 +96,10 @@ $('#submit-btn').click(function() {
 
     if ($('input[name="question3"]').is(":checked")) {
 
-        if ($('input[name="question3"]:checked').val() === (correctAnswers.answer0)) {
+        if ($('input[name="question3"]:checked').val() === (correctAnswers.answer3)) {
             userCorrect++;
         } 
-        if ($('input[name="question3"]:checked').val() != (correctAnswers.answer0)) { 
+        if ($('input[name="question3"]:checked').val() != (correctAnswers.answer3)) { 
             userIncorrect++;
         }
     }
@@ -103,10 +111,10 @@ $('#submit-btn').click(function() {
 
     if ($('input[name="question4"]').is(":checked")) {
 
-        if ($('input[name="question4"]:checked').val() === (correctAnswers.answer0)) {
+        if ($('input[name="question4"]:checked').val() === (correctAnswers.answer4)) {
             userCorrect++;
         } 
-        if ($('input[name="question4"]:checked').val() != (correctAnswers.answer0)) { 
+        if ($('input[name="question4"]:checked').val() != (correctAnswers.answer4)) { 
             userIncorrect++;
         }
     }
@@ -118,10 +126,10 @@ $('#submit-btn').click(function() {
 
     if ($('input[name="question5"]').is(":checked")) {
 
-        if ($('input[name="question5"]:checked').val() === (correctAnswers.answer0)) {
+        if ($('input[name="question5"]:checked').val() === (correctAnswers.answer5)) {
             userCorrect++;
         } 
-        if ($('input[name="question5"]:checked').val() != (correctAnswers.answer0)) { 
+        if ($('input[name="question5"]:checked').val() != (correctAnswers.answer5)) { 
             userIncorrect++;
         }
     }
@@ -133,10 +141,10 @@ $('#submit-btn').click(function() {
 
     if ($('input[name="question6"]').is(":checked")) {
 
-        if ($('input[name="question6"]:checked').val() === (correctAnswers.answer0)) {
+        if ($('input[name="question6"]:checked').val() === (correctAnswers.answer6)) {
             userCorrect++;
         } 
-        if ($('input[name="question6"]:checked').val() != (correctAnswers.answer0)) { 
+        if ($('input[name="question6"]:checked').val() != (correctAnswers.answer6)) { 
             userIncorrect++;
         }
     }
@@ -148,10 +156,10 @@ $('#submit-btn').click(function() {
 
     if ($('input[name="question7"]').is(":checked")) {
 
-        if ($('input[name="question7"]:checked').val() === (correctAnswers.answer0)) {
+        if ($('input[name="question7"]:checked').val() === (correctAnswers.answer7)) {
             userCorrect++;
         } 
-        if ($('input[name="question7"]:checked').val() != (correctAnswers.answer0)) { 
+        if ($('input[name="question7"]:checked').val() != (correctAnswers.answer7)) { 
             userIncorrect++;
         }
     }
@@ -163,10 +171,10 @@ $('#submit-btn').click(function() {
 
     if ($('input[name="question8"]').is(":checked")) {
 
-        if ($('input[name="question8"]:checked').val() === (correctAnswers.answer0)) {
+        if ($('input[name="question8"]:checked').val() === (correctAnswers.answer8)) {
             userCorrect++;
         } 
-        if ($('input[name="question8"]:checked').val() != (correctAnswers.answer0)) { 
+        if ($('input[name="question8"]:checked').val() != (correctAnswers.answer8)) { 
             userIncorrect++;
         }
     }
@@ -178,10 +186,10 @@ $('#submit-btn').click(function() {
 
     if ($('input[name="question9"]').is(":checked")) {
 
-        if ($('input[name="question9"]:checked').val() === (correctAnswers.answer0)) {
+        if ($('input[name="question9"]:checked').val() === (correctAnswers.answer9)) {
             userCorrect++;
         } 
-        if ($('input[name="question9"]:checked').val() != (correctAnswers.answer0)) { 
+        if ($('input[name="question9"]:checked').val() != (correctAnswers.answer9)) { 
             userIncorrect++;
         }
     }
@@ -203,4 +211,5 @@ $('#submit-btn').click(function() {
 
 })
     
+$('#reset-btn').click(resetQuiz);
 

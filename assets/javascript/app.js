@@ -20,6 +20,20 @@ var userCorrect = 0;
 var userIncorrect = 0;
 var userUnanswered = 0;
 
+// timer vars
+var timeNumber = 90;
+var intervalID;
+
+function timerRun() {
+    clearInterval(intervalID);
+}
+
+// decrement function
+function decrement() {
+    timeNumber--;
+    $('#timer-display').html(timeNumber);
+}
+
 // function resets quiz at end
 function resetQuiz() {
     userCorrect = 0;
@@ -206,7 +220,7 @@ $('#submit-btn').click(function() {
 // resets quiz on click
 $('#reset-btn').click(resetQuiz);
 
-function timeLimit() {
+function timeLimitReached() {
     if ($('input[name="question0"]').is(":checked")) {
 
         if ($('input[name="question0"]:checked').val() === (correctAnswers.answer0)) {

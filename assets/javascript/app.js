@@ -26,12 +26,17 @@ var intervalID;
 
 function timerRun() {
     clearInterval(intervalID);
+    intervalID = setInterval(decrement, 1000);
 }
 
 // decrement function
 function decrement() {
     timeNumber--;
     $('#timer-display').html(timeNumber);
+    if (timeNumber === 0) {
+        gradeQuiz();
+        clearInterval(intervalID);
+    }
 }
 
 // function resets quiz at end
@@ -39,6 +44,8 @@ function resetQuiz() {
     userCorrect = 0;
     userIncorrect = 0;
     userUnanswered = 0;
+    timeNumber = 90;
+    timerRun();
     $(":checked").each(function() {
         $('input[type="radio"]').prop('checked', false);
     })
@@ -50,177 +57,12 @@ function resetQuiz() {
 $('#start-btn').click(function() {
     $('header').hide();
     $('main').show();
+    timerRun();
 })
 
 
-// runs grading logic on submit button click
-$('#submit-btn').click(function() {
-    
-    if ($('input[name="question0"]').is(":checked")) {
 
-        if ($('input[name="question0"]:checked').val() === (correctAnswers.answer0)) {
-            userCorrect++;
-        } 
-        if ($('input[name="question0"]:checked').val() != (correctAnswers.answer0)) { 
-            userIncorrect++;
-        }
-    }
-    else {
-        userUnanswered++;
-    }
-
-
-    if ($('input[name="question1"]').is(":checked")) {
-
-        if ($('input[name="question1"]:checked').val() === (correctAnswers.answer1)) {
-            userCorrect++;
-        } 
-        if ($('input[name="question1"]:checked').val() != (correctAnswers.answer1)) { 
-            userIncorrect++;
-        }
-    }
-    else {
-        userUnanswered++;
-    }
-
-
-    if ($('input[name="question2"]').is(":checked")) {
-
-        if ($('input[name="question2"]:checked').val() === (correctAnswers.answer2)) {
-            userCorrect++;
-        } 
-        if ($('input[name="question2"]:checked').val() != (correctAnswers.answer2)) { 
-            userIncorrect++;
-        }
-    }
-    else {
-        userUnanswered++;
-    }
-
-
-    if ($('input[name="question3"]').is(":checked")) {
-
-        if ($('input[name="question3"]:checked').val() === (correctAnswers.answer3)) {
-            userCorrect++;
-        } 
-        if ($('input[name="question3"]:checked').val() != (correctAnswers.answer3)) { 
-            userIncorrect++;
-        }
-    }
-    else {
-        userUnanswered++;
-    }
-
-
-
-    if ($('input[name="question4"]').is(":checked")) {
-
-        if ($('input[name="question4"]:checked').val() === (correctAnswers.answer4)) {
-            userCorrect++;
-        } 
-        if ($('input[name="question4"]:checked').val() != (correctAnswers.answer4)) { 
-            userIncorrect++;
-        }
-    }
-    else {
-        userUnanswered++;
-    }
-
-
-
-    if ($('input[name="question5"]').is(":checked")) {
-
-        if ($('input[name="question5"]:checked').val() === (correctAnswers.answer5)) {
-            userCorrect++;
-        } 
-        if ($('input[name="question5"]:checked').val() != (correctAnswers.answer5)) { 
-            userIncorrect++;
-        }
-    }
-    else {
-        userUnanswered++;
-    }
-
-
-
-    if ($('input[name="question6"]').is(":checked")) {
-
-        if ($('input[name="question6"]:checked').val() === (correctAnswers.answer6)) {
-            userCorrect++;
-        } 
-        if ($('input[name="question6"]:checked').val() != (correctAnswers.answer6)) { 
-            userIncorrect++;
-        }
-    }
-    else {
-        userUnanswered++;
-    }
-
-
-
-    if ($('input[name="question7"]').is(":checked")) {
-
-        if ($('input[name="question7"]:checked').val() === (correctAnswers.answer7)) {
-            userCorrect++;
-        } 
-        if ($('input[name="question7"]:checked').val() != (correctAnswers.answer7)) { 
-            userIncorrect++;
-        }
-    }
-    else {
-        userUnanswered++;
-    }
-
-
-
-    if ($('input[name="question8"]').is(":checked")) {
-
-        if ($('input[name="question8"]:checked').val() === (correctAnswers.answer8)) {
-            userCorrect++;
-        } 
-        if ($('input[name="question8"]:checked').val() != (correctAnswers.answer8)) { 
-            userIncorrect++;
-        }
-    }
-    else {
-        userUnanswered++;
-    }
-
-
-
-    if ($('input[name="question9"]').is(":checked")) {
-
-        if ($('input[name="question9"]:checked').val() === (correctAnswers.answer9)) {
-            userCorrect++;
-        } 
-        if ($('input[name="question9"]:checked').val() != (correctAnswers.answer9)) { 
-            userIncorrect++;
-        }
-    }
-    else {
-        userUnanswered++;
-    }
-
-    // switches page to grading data on submit
-    $('main').hide();
-    $('#grade-div').show();
-    
-    // displays grade data
-    $('#correct-total').html("Correct: " + userCorrect);
-    $('#incorrect-total').html("Incorrect: " + userIncorrect);
-    $('#unanswered-total').html("Unanswered: " + userUnanswered);
-
-        console.log("correct " + userCorrect);
-        console.log("incorrect " + userIncorrect);
-        console.log("unanswered " + userUnanswered);
-        
-
-})
-
-// resets quiz on click
-$('#reset-btn').click(resetQuiz);
-
-function timeLimitReached() {
+function gradeQuiz() {
     if ($('input[name="question0"]').is(":checked")) {
 
         if ($('input[name="question0"]:checked').val() === (correctAnswers.answer0)) {
@@ -379,3 +221,10 @@ function timeLimitReached() {
         console.log("incorrect " + userIncorrect);
         console.log("unanswered " + userUnanswered);
 }
+
+// runs grading logic on submit button click
+$('#submit-btn').click(gradeQuiz);
+    
+
+// resets quiz on click
+$('#reset-btn').click(resetQuiz);

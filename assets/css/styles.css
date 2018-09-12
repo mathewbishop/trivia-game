@@ -32,6 +32,7 @@ h1 {
 main {
     /* display: none; */
     background-size: cover;
+    background-repeat: no-repeat;
     animation-name: main-carousel;
     animation-duration: 90s; 
     animation-iteration-count: infinite;
@@ -51,11 +52,10 @@ main {
 
 
 @keyframes main-carousel {
-    0% {background-image: url('../images/gasMask.jpg')}
-    25% {background-image: url('../images/howitzerCrew.jpg')}
-    50% {background-image: url('../images/machineGun.jpg')}
-    75% {background-image: url('../images/parisGun.jpg')}
-    100% {background-image: url('../images/trench.jpg')}
+    0% {background: linear-gradient(to top, #fff, transparent 50%), url('../images/gasMask.jpg')}
+    50% {background: linear-gradient(to top, #fff, transparent 90%), url('../images/howitzerCrew.jpg')}
+    75% {background: linear-gradient(to top, #fff, transparent 90%), url('../images/machineGun.jpg')}
+    100% {background: linear-gradient(to top, #fff, transparent 90%), url('../images/trench.jpg')}
 }
 
 @keyframes start-button-fade {

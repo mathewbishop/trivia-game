@@ -2,7 +2,7 @@ header {
     background-image: url('../images/coverPic.jpg');
     background-size: cover;
     height: 100vh;
-    display: none;
+    display: none;  /* Not displayed! */
 }
 
 h1, h2 {
@@ -17,6 +17,12 @@ h1 {
     padding-top: 8rem;
 }
 
+#timer-display {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+
 #start-btn-div {
     text-align: center;
     padding-right: 20rem;
@@ -30,7 +36,7 @@ h1 {
 }
 
 main {
-    /* display: none; */
+    display: none;
     background-size: cover;
     background-repeat: no-repeat;
     animation-name: main-carousel;
@@ -42,12 +48,19 @@ main {
     font-weight: 500;
     font-size: 1.2rem;
     color: black;
+    margin-top: 15px;
+}
+
+#rememberance-text {
+    font-size: 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
 }
 
 
 
 #grade-div {
-    display: none;
+    /* display: none; */
 }
 
 

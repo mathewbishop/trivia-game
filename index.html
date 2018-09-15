@@ -19,7 +19,7 @@
             </div>
         </header>
         <main>
-            <p id="timer-display"></p>
+            <p class="text-center mb-4" id="timer-display"></p>
             <form class="col-10 offset-1" id="quiz">
                 
                     <p class="question">True or False: 'The Paris Gun' was a German artillery piece that was able to hit Paris from its position behind the Western Front's German line (about 75 miles distance).</p>
@@ -163,19 +163,23 @@
                 
 
                     <div id="submit">
-                        <button type="button" id="submit-btn" value="submit">Submit</button>
+                        <button class="btn btn-lg btn-secondary mt-4 mb-5" type="button" id="submit-btn" value="submit">Submit</button>
                     </div>
 
             </form>
         </main>
-        <div id="grade-div">
-            <p>Your Grade</p>
-            <p id="correct-total"></p>
-            <p id="incorrect-total"></p>
-            <p id="unanswered-total"></p>
-            <p>Note: The Great War was not a trivial matter. In addition to taking the lives of nearly 40 million people, it cast a deeply unsettling philisophical shadow over the modern world. It challanged the idea that peace and commerce had put an end to war, or that mankind had become morally superior to our ancestors, and it set the stage for another, even greater atrocity of the 20th Century, World War 2. Let us mourn and remember.</p>
-            <button id="reset-btn" type="button" class="btn">Restart Quiz</button>
-        </div>
+        <section class="row">       <!-- row -->
+            <div id="grade-div">
+                <div class="card">
+                <p class="card-header">Your Grade</p>
+                <p class="card-text" id="correct-total"></p>
+                <p class="card-text" id="incorrect-total"></p>
+                <p class="card-text" id="unanswered-total"></p>
+            </div>
+                <p id="rememberance-text" class="col-10 offset-1 text-center mt-5">Note: The Great War was not a trivial matter. In addition to taking the lives of nearly 40 million people, it cast an ominous shadow over the modern world. It challanged the idea that modern people had become morally superior to our ancestors, and it set the stage for another sickening atrocity of the 20th Century, World War 2. Let us mourn and remember.</p>
+                <button class="btn btn-lg btn-secondary offset-5" id="reset-btn" type="button" class="btn">Restart Quiz</button>
+            </div>
+        </section>
     </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

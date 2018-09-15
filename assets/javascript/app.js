@@ -47,6 +47,8 @@ function resetQuiz() {
     timerRun();
     $(":checked").each(function() {
         $('input[type="radio"]').prop('checked', false);
+        $('[data-toggle="buttons"] :radio').prop('checked', false);
+        $('[data-toggle="buttons"] label').removeClass('active');
     })
     $('#grade-div').hide();
     $('main').show(500);

@@ -2,7 +2,6 @@ header {
     background-image: url('../images/coverPic.jpg');
     background-size: cover;
     height: 100vh;
-    display: none;  /* Not displayed! */
 }
 
 h1, h2 {
@@ -60,15 +59,15 @@ main {
 
 
 #grade-div {
-    /* display: none; */
+    display: none;
 }
 
 
 @keyframes main-carousel {
-    0% {background: linear-gradient(to top, #fff, transparent 50%), url('../images/gasMask.jpg')}
-    50% {background: linear-gradient(to top, #fff, transparent 90%), url('../images/howitzerCrew.jpg')}
-    75% {background: linear-gradient(to top, #fff, transparent 90%), url('../images/machineGun.jpg')}
-    100% {background: linear-gradient(to top, #fff, transparent 90%), url('../images/trench.jpg')}
+    0% {background: linear-gradient(to top, #fff, transparent 100%), url('../images/gasMask.jpg')}
+    50% {background: linear-gradient(to top, #fff, transparent 100%), url('../images/howitzerCrew.jpg')}
+    75% {background: linear-gradient(to top, #fff, transparent 100%), url('../images/machineGun.jpg')}
+    100% {background: linear-gradient(to top, #fff, transparent 100%), url('../images/trench.jpg')}
 }
 
 @keyframes start-button-fade {

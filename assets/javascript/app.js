@@ -31,7 +31,7 @@ function timerRun() {
 // decrement function
 function decrement() {
     timeNumber--;
-    $('#timer-display').html(timeNumber);
+    $('#timer-display').html("Time Remaining: " + timeNumber);
     if (timeNumber === 0) {
         gradeQuiz();
         clearInterval(intervalID);
@@ -216,9 +216,6 @@ function gradeQuiz() {
     $('#incorrect-total').html("Incorrect: " + userIncorrect);
     $('#unanswered-total').html("Unanswered: " + userUnanswered);
 
-        console.log("correct " + userCorrect);
-        console.log("incorrect " + userIncorrect);
-        console.log("unanswered " + userUnanswered);
 }
 
 // runs grading logic on submit button click
